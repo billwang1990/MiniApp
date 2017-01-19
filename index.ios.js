@@ -11,4 +11,4 @@ import {
 
 import Setup from './js/setup'
 
-AppRegistry.registerComponent('miniapp', () => Setup)
+AppRegistry.registerComponent('MiniApp', () => Setup)
