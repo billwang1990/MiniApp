@@ -2,6 +2,7 @@ import { Navigator, StyleSheet, Text, View } from 'react-native'
 import React, { Component } from 'react'
 import AppSummary from '../compoents/MiniAppCell'
 import { connect } from 'react-redux'
+import { fetchDetail , fetchAppList} from '../api'
 
 const styles = StyleSheet.create({
   container: {
@@ -11,14 +12,16 @@ const styles = StyleSheet.create({
   }
 })
 
-
 class DetailPage extends Component {
   constructor() {
     super()
   }
 
   componentWillMount() {
-    console.log(this.props.app)
+    console.log(fetchDetail)
+    fetchDetail().then( result => {
+      this.state.detail = result
+    })
   }
 
   render() {

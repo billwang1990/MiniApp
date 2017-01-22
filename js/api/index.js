@@ -3,29 +3,22 @@ import React from 'react'
 
 const HOST = "http://localhost:12306"
 
-export function fetchDetail() {
-  return fetch('http://localhost:12306/appDetail', {
-    method: 'GET',
+function fetchData(path, method = 'GET') {
+  return fetch(HOST+path, {
+    method: method,
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     }
   }).then( result => {
-    console.log(result)
-    return response.json()
+      return result.json()
   })
 }
 
+export function fetchDetail() {
+  return fetchData('/appDetail')
+}
 
 export function fetchAppList() {
-  return fetch('http://localhost:12306/miniAppList', {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    }
-  }).then((result) => {
-    console.log(result)
-    return response.json()
-  })
+  return fetchData('/miniAppList')
 }

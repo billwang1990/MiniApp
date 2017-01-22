@@ -26,7 +26,6 @@ class Home extends Component {
   }
 
   componentWillMount() {
-    console.log(this.props.fetchListAction)
     this.props.fetchListAction(0)
   }
 
@@ -34,7 +33,6 @@ class Home extends Component {
     const { appList, fetchListAction, fetchDetailAction, navigator } = this.props
     const filteredList = appList
     const ds = this.dataSource.cloneWithRows(filteredList)
-    console.log(appList)
     return (
       <View style={styles.container}>
         <ListView
