@@ -1,3 +1,5 @@
+import { fetchAppList } from '../api'
+
 export const APP_LIST = 'APP_LIST'
 
 function generateMockAppList(num) {
@@ -15,8 +17,13 @@ function generateMockAppList(num) {
 }
 
 export function fetchMiniAppListAction(index) {
-  return {
-    payload: index,
-    type: APP_LIST
+  return function(dispatch){
+      console.log(fetchAppList)
+      fetchAppList().then((data)=>{      // 使用 fetch 调用远程数据
+          dispatch({                                // 执行 dispatch(action)
+              type: APP_LIST,
+              payload: data.data,
+          })
+      })
   }
 }
