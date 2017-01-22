@@ -4,6 +4,10 @@ import AppSummary from '../compoents/MiniAppCell'
 import { connect } from 'react-redux'
 import { fetchDetail , fetchAppList} from '../api'
 
+function isEmpty(obj){
+    return (Object.getOwnPropertyNames(obj).length === 0);
+}
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -15,20 +19,31 @@ const styles = StyleSheet.create({
 class DetailPage extends Component {
   constructor() {
     super()
+    this.state = { detail: {} };
   }
 
   componentWillMount() {
-    console.log(fetchDetail)
     fetchDetail().then( result => {
-      this.state.detail = result
+      console.log("取到了")
+      this.setState({ detail: result })
+      console.log(this.state)
     })
   }
 
   render() {
     const { app, action } = this.props
+    const { detail } = this.state
+
+    const info = Object.assign({}, detail.data);
+    var intro = ""
+    if (isEmpty(info) == false) {
+      intro = info.intro
+    }
+
     return (
       <View style={styles.container}>
         <AppSummary app={app}/>
+        <Text> {intro} </Text>
       </View>
     )
   }
