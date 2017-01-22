@@ -1,0 +1,56 @@
+[
+    {
+        "request": {
+            "uri": "/miniAppList"
+        },
+        "response": {
+            "json": {
+                  "resultStatus": 0,
+                  "data":     [{
+                        "icon": "http://media.ifanrusercontent.com/media/user_files/trochili/8d/32/8d32c03270dcc655b38927ce7795642ac769c0cc-5421571eb7b116c6e992236c5849b1d56618738c.jpg",
+                        "name": "房产估值",
+                        "tags": ["金融", "工具", "娱乐"],
+                        "id": 12345
+                      },
+                      {
+                        "icon": "http://media.ifanrusercontent.com/media/user_files/trochili/8d/32/8d32c03270dcc655b38927ce7795642ac769c0cc-5421571eb7b116c6e992236c5849b1d56618738c.jpg",
+                        "name": "房产估值",
+                        "tags": ["金融", "工具", "娱乐"],
+                        "id": 12345
+                      },
+                      {
+                        "icon": "http://media.ifanrusercontent.com/media/user_files/trochili/8d/32/8d32c03270dcc655b38927ce7795642ac769c0cc-5421571eb7b116c6e992236c5849b1d56618738c.jpg",
+                        "name": "房产估值",
+                        "tags": ["金融", "工具", "娱乐"],
+                        "id": 12345
+                      },
+                      {
+                        "icon": "http://media.ifanrusercontent.com/media/user_files/trochili/8d/32/8d32c03270dcc655b38927ce7795642ac769c0cc-5421571eb7b116c6e992236c5849b1d56618738c.jpg",
+                        "name": "房产估值",
+                        "tags": ["金融", "工具", "娱乐"],
+                        "id": 12345
+                      }
+                    ]
+            }
+        }
+    },
+    {
+        "request": {
+            "uri": "/appDetail"
+        },
+        "response": {
+            "json": {
+                  "resultStatus": 0,
+                  "data":     
+                    {
+                        "icon": "http://media.ifanrusercontent.com/media/user_files/trochili/8d/32/8d32c03270dcc655b38927ce7795642ac769c0cc-5421571eb7b116c6e992236c5849b1d56618738c.jpg",
+                        "name": "房产估值",
+                        "tags": ["金融", "工具", "娱乐"],
+                        "id": 12345,
+                        "images": [],
+                        "intro": "很多移动应用都需要从远程地址中获取数据或资源。你可能需要给某个REST API发起POST请求以提交用户数"
+                    }
+            }
+        }
+    }
+]

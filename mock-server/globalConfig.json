@@ -1,0 +1,6 @@
+[
+    {
+       "file_root":"api/miniapp",
+       "include": "miniApp.json"
+    }
+]
