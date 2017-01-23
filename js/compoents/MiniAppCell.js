@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     padding: 3,
     backgroundColor: '#044974',
     borderRadius: 3,
-    color: 'white'
+    color: 'white',
+    height: 20
   },
   cell: {
     height: 60,
