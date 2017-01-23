@@ -62,7 +62,7 @@ class DetailPage extends Component {
     }
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <AppSummary app={app}/>
         <Text style={styles.introTitle}> {intro} </Text>
   
@@ -80,7 +80,7 @@ class DetailPage extends Component {
           }
         </Swiper>
 
-      </View>
+      </ScrollView>
     )
   }
 }
